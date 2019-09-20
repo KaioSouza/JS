@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body></body>
+    <script>
+        data = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+        console.log(data)
+        reorderArray(data, data[5], 0, 5)
+        console.log(data)
+        function reorderArray(array, value, newPosition, oldPosition) {
+
+            if (newPosition > oldPosition) {
+                array.splice(newPosition + 1, 0, value)
+                array.splice(oldPosition, 1)
+            }
+            else{
+                array.splice(newPosition, 0, value)
+                array.splice(oldPosition + 1, 1)
+            }
+            
+        }
+    </script>
+</html>
